@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu&display=swap');
+
+/* ------------ROOT VARIABLES -----------*/
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+nav
+{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navigation
+{
+    background-color: #333333;
+}
+
+.navigation .top
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .logo
+{
+    line-height: 65px;
+    margin-left: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.navigation .logo h2
+{
+    color: white;
+    text-shadow: 2px 1px rgb(158, 158, 158);
+}
+
+.navigation .logo img
+{
+    margin-top: 7px;
+    width:50px;
+    height: 50px;
+}
+
+.navigation .close
+{
+    display: none;
+}
+
+/* ========== SIDEBAR ========== */
+
+aside .sidebar
+{
+    width: 20%;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    position: fixed;
+    background-color: rgb(233, 233, 233);
+}
+
+aside h3 
+{
+    font-weight: 500;
+}
+
+aside .sidebar a
+{
+    display: flex;
+    margin-top: 10px;
+    color: var(--color-info-dark);
+    padding-left: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span 
+{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child
+{
+    position: absolute;
+    bottom: 2rem;
+
+}
+
+aside .sidebar a:hover
+{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span
+{
+    margin-left: 1rem;
+}
+
+aside .sidebar .message-count
+{
+    background: var(--color-danger);
+    color: var(--color-white);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+
+/*====== EDIT PRODUCT DESIGN ======*/
+.container-edit-products
+{
+    width: 100%;
+    height: auto;
+}
+
+.container-edit-products .card-edit_product
+{
+    margin-top: 70px;
+    width: 80%;
+    float: right;
+    padding: 10px 20px;
+}
+
+.container-edit-products .card-edit_product .card-header
+{
+    padding-top: 10px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-edit_product .card-column-edit
+{
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(105, 105, 105);
+    background-color: #dfdfdf;
+}
+
+.card-edit_product .card-body-edit
+{
+    
+    margin-top: 20px;
+}
+
+.card-body-edit .col-01 
+{
+    display: flex;
+}
+
+.card-body-edit .col-01 .card-left
+{
+    width: 50%;
+    padding: 10px;
+}
+
+.card-body-edit .col-01 .card-right
+{
+    width: 50%;
+    padding: 10px;
+}
+
+.card-edit_product .card-body-edit .col-01 .col-01-row
+{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card-edit_product .card-body-edit .col-01 .col-01-row label
+{
+    line-height: 40px;
+    display: block;
+    font-size: 20px;
+}
+
+.card-edit_product .card-body-edit .col-01 .col-01-row input
+{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+}
+
+.card-edit_product  .card-body-edit .col-01 .col-01-row textarea
+{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+}
+
+.card-edit_product .col-02
+{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.card-edit_product .check-box
+{
+    font-size: 1.1em;
+}
+
+.card-edit_product .check-box .box
+{
+    padding-bottom: 5px;
+}
+
+.card-edit_product .check-box .box label
+{
+    
+    margin-left: 5px;
+
+}
+
+.card-edit_product .card-body-edit .update button
+{
+    margin: 10px;
+    padding: 11px 11px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    background-color: #ee6873;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    box-shadow: 3px 3px gray;
+}
+
+.card-edit_product .card-body-edit .update .btn:hover
+{
+    background-color: skyblue;
+    color: black;
+    text-shadow: none;
+    transition: 0.5s ease;
+}
+
+.card-column-edit .card-header h4 .btn-back
+{
+    width: 70px;
+    float: right;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    background-color: #ff7782;
+    box-shadow: 3px 3px gray;
+}
+
+.card-column-edit .card-header h4 .btn-back:hover
+{
+    background-color: black;
+    transition: 0.4s ease;
+}
+
+
+
+/*====== ADD PRODUCTS ======*/
+.container-add_product
+{
+    width: 100%;
+    height: auto;
+}
+
+.container-add_product .card-add_product
+{
+    margin-top: 70px;
+    width: 80%;
+    float: right;
+    padding: 10px 20px;
+}
+
+.container-add_product .card-add_product .card-header
+{
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-add_product .card-column-add
+{
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(105, 105, 105);
+    background-color: #dfdfdf;
+}
+
+.card-add_product .card-body-add
+{
+    margin-top: 40px;
+    padding: 10px 20px;
+}
+
+.card-body-add .col-01 
+{
+    display: flex;
+}
+
+.card-body-add .col-01 .card-left
+{
+    width: 50%;
+    padding: 10px;
+}
+
+.card-body-add .col-01 .card-right
+{
+    width: 50%;
+    padding: 10px;
+}
+
+.card-add_product .card-body-add .col-01 .col-01-row
+{
+    margin-bottom: 20px;
+}
+
+.card-add_product .card-body-add  .col-01 .col-01-row label
+{
+    line-height: 40px;
+    display: block;
+    font-size: 20px;
+}
+
+.card-add_product .card-body-add .col-01 .col-01-row input
+{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+}
+
+.card-add_product  .card-body-add .col-01 .col-01-row textarea
+{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+}
+
+.card-add_product  .col-02
+{
+    width: 100%;
+    position: relative;
+}
+
+.card-add_product .check-box
+{
+    width: 60%;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+.card-add_product .check-box .box label
+{
+    margin-left: 5px;
+
+}
+
+.card-add_product .card-body-add .save .btn
+{
+    margin: 10px;
+    padding: 8px 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    background-color: #ff7782;
+    border-radius: 5px;
+    box-shadow: 3px 3px gray;
+}
+
+.card-add_product .card-body-add .save .btn:hover
+{
+    background-color: skyblue;
+    transition: 0.5s ease;
+}
+
+
+
+/*====== Products ======*/
+
+.container-product
+{
+    width: 100%;
+}
+
+.container-product .card-product
+{
+    margin-top: 80px;
+    width: 80%;
+    float: right;
+    padding: 10px 20px;
+}
+
+.container-product .card-product .column-card
+{
+    width: 90%;
+    margin-left: 50px;
+    padding: 10px;
+    background-color: #f6f6f9;
+}
+
+.container-product .card-product .card-header
+{
+    padding: 15px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+
+.container-product .card-body-product .table-product
+{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.card-body-product .table-product thead th
+{
+    white-space: nowrap;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.card-body-product .table-product tbody td
+{
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    border: 1px solid black;
+}
+
+.card-body-product .table-product tbody td img 
+{
+    padding: 5px;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+
+}
+
+.card-body-product .table-product tbody td .btn
+{
+    width: 70px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(68, 68, 68);
+    background-color: #ff7782;
+}
+
+.card-body-product .table-product tbody td .btn:hover
+{
+    background-color: black;
+    color: white;
+    text-shadow: none;
+    transition: .4s ease;
+}
+
+
+/*====== DASHBOARD ======*/
+.dash 
+{
+    width: 100%;
+    height: auto;
+}
+
+.dash .dash-card
+{
+    margin: 80px 10px 10px 10px;
+    width: 78%;
+    float: right;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.dash-header
+{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+.dash-header h3
+{
+    margin-bottom: 10px;
+}
+
+.dash-body
+{
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 5px 5px grey;
+}
+
+.dash-table
+{
+    width: 95%;
+    margin: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.dash-table thead th 
+{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.dash-table tbody td
+{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    border: 1px solid black;
+}

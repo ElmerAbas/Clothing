@@ -42,7 +42,7 @@ include('includes/header.php');
                     <div class="card-01">
                         <div class="card-list">
                             <div class="details">
-                                <h2>New Design Tshirt</h2>
+                                <h2>New Design T-shirt</h2>
                                 <a href="products.php">Shop Now</a>
                             </div>
                             <img src="./assets/img/tshirt 1.jpg" alt="">
